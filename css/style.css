@@ -1,0 +1,37 @@
+﻿/* --------------- CSS for Confirmation Page (thanks.html) --------------- */
+
+#confirmation {
+    padding: 100px 0; /* Adds space above and below the content */
+    min-height: 80vh; /* Ensures the content doesn't sit weirdly at the top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-content {
+    text-align: center; /* Centers all the text and the button */
+    max-width: 600px;
+    margin: auto;
+}
+
+    .confirmation-content .fa-check-circle {
+        font-size: 80px;
+        color: #ff004f; /* Using your main accent color */
+        margin-bottom: 30px;
+    }
+
+    .confirmation-content h1 {
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    .confirmation-content p {
+        color: #ababab; /* Using your subtle text color */
+        font-size: 18px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .confirmation-content .btn.btn2 {
+        margin-top: 40px; /* Adds space above the button */
+    }
