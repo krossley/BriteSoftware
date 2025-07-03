@@ -257,6 +257,18 @@
     </footer>
 
     <script>
+        // Redirect to thanks.html after form submit
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    window.location.href = 'thanks.html';
+                });
+            }
+        });
+    </script>
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -281,7 +293,8 @@
             } else {
                 header.style.background = 'rgba(0, 0, 0, 0.9)';
             }
-        });
+
+
     </script>
 </body>
 </html>
