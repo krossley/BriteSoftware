@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\thanks.html" />
+    <Content Include="index.html" />
+    <Content Include="thanks.html" />
   </ItemGroup>
 
   <ItemGroup>
