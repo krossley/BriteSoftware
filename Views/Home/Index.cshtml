@@ -255,7 +255,19 @@
             </div>
         </div>
     </footer>
-
+    <script>
+                // Redirect to thanks.html after form submit - MOVED OUTSIDE
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    window.location.href = 'thanks.html';
+                });
+            }
+        });
+        
+    </script>
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -271,11 +283,6 @@
             });
         });
 
-        // Form submission handler
-        document.querySelector('.contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! We\'ll get back to you soon.');
-        });
 
         // Add scroll effect to header
         window.addEventListener('scroll', function () {
