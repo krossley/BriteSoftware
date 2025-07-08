@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brite Software - Custom Software Development</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="/css/index.css" rel="stylesheet">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="~/css/index.css">
+    <!-- Devicon library for technology icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 </head>
 <body>
     <!-- Header -->
@@ -19,6 +20,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <svg class="hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg class="close" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </nav>
     </header>
 
@@ -38,47 +43,65 @@
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                <!-- Card 1 -->
+                <div class="box" role="button" aria-label="Custom Web Applications Service">
+                    <div class="glass"></div>
+                    <div class="content">
+                        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="m14.25 4.5-5.5 15m12-15-5.5 15" /></svg></div>
+                        <h3>Custom Web Applications</h3>
+                        <p>Full-stack development using .NET, Blazor, and modern web technologies to create scalable business solutions.</p>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>Custom Web Applications</h3>
-                    <p>Full-stack development using .NET, Blazor, and modern web technologies to create scalable business solutions.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                <!-- Card 2 -->
+                <div class="box" role="button" aria-label="Cloud Solutions Service">
+                    <div class="glass"></div>
+                    <div class="content">
+                        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.5 19h-11a5.5 5.5 0 1 1 0-11h11a5.5 5.5 0 0 1 0 11Z" /><path d="M19.75 12.5a2.75 2.75 0 0 0-2.25-2.65V9.5a5.5 5.5 0 1 1 0-11h-11a5.5 5.5 0 0 0 0 11V10" /></svg></div>
+                        <h3>Cloud Solutions</h3>
+                        <p>Azure-based applications with secure authentication, APIs, and cloud-native architecture for maximum scalability.</p>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Azure-based applications with secure authentication, APIs, and cloud-native architecture for maximum scalability.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
+                <!-- Card 3 -->
+                <div class="box" role="button" aria-label="AI & Automation Service">
+                    <div class="glass"></div>
+                    <div class="content">
+                        <div class="service-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 0-2 2v2H8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v4H8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2v-4h2a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2V4a2 2 0 0 0-2-2m-4 6h8v2H8V8m8 8H8v2h8v-2Z" /></svg></div>
+                        <h3>AI & Automation</h3>
+                        <p>Integrate AI agents and workflow automation using tools like n8n and Auto-GPT to streamline your business processes.</p>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>AI & Automation</h3>
-                    <p>Integrate AI agents and workflow automation using tools like n8n and Auto-GPT to streamline your business processes.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
+                <!-- Card 4 -->
+                <div class="box" role="button" aria-label="Database Solutions Service">
+                    <div class="glass"></div>
+                    <div class="content">
+                        <div class="service-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4m0 2c3.67 0 6.56 1.33 7 2.61-.44 1.28-3.33 2.61-7 2.61S5.44 8.89 5 7.61C5.44 6.33 8.33 5 12 5m0 5c-4.42 0-8 1.79-8 4s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4m0 2c3.67 0 6.56 1.33 7 2.61-.44 1.28-3.33 2.61-7 2.61S5.44 13.89 5 12.61C5.44 11.33 8.33 10 12 10m0 5c-4.42 0-8 1.79-8 4s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4m0 2c3.67 0 6.56 1.33 7 2.61-.44 1.28-3.33 2.61-7 2.61S5.44 18.89 5 17.61C5.44 16.33 8.33 15 12 15Z" /></svg></div>
+                        <h3>Database Solutions</h3>
+                        <p>SQL Server and Azure SQL database design, optimization, and integration for robust data management.</p>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>Database Solutions</h3>
-                    <p>SQL Server and Azure SQL database design, optimization, and integration for robust data management.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <!-- Card 5 -->
+                <div class="box" role="button" aria-label="Blazor Applications Service">
+                    <div class="glass"></div>
+                    <div class="content">
+                        <div class="service-icon"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 10.452 22.842 6.12 12.012.012 1.182 6.12 12.012 10.452zm-.018 3.144L1.182 8.28v7.452l10.812 6.096v-8.232zM12.012 13.596V21.84l10.83-6.108V8.28L12.012 13.596z" /></svg></div>
+                        <h3>Blazor Applications</h3>
+                        <p>Modern web applications using Blazor WebAssembly for rich, interactive user experiences.</p>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>Blazor Applications</h3>
-                    <p>Modern web applications using Blazor WebAssembly for rich, interactive user experiences.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                <!-- Card 6 -->
+                <div class="box" role="button" aria-label="Business Automation Service">
+                    <div class="glass"></div>
+                    <div class="content">
+                        <div class="service-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0-9-9" /><path d="M12 15a3 3 0 1 0-3-3" /><path d="m15.89 12.83-2.12-2.12a2 2 0 0 0-2.83 0L3 18.59V21h2.41L13.5 12.91a2 2 0 0 1 2.83 0l1.68-1.68a2 2 0 0 0 0-2.83l-2.12-2.12a2 2 0 0 0-2.83 0L3 14.59V17h2.41l8.09-8.09a2 2 0 0 1 2.83 0Z" /></svg></div>
+                        <h3>Business Automation</h3>
+                        <p>Custom tools for quotes, invoices, lead tracking, and client portals to simplify your daily operations.</p>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>Business Automation</h3>
-                    <p>Custom tools for quotes, invoices, lead tracking, and client portals to simplify your daily operations.</p>
                 </div>
             </div>
         </div>
@@ -97,13 +120,13 @@
                     <div class="about-highlights">
                         <h3>What Sets Us Apart:</h3>
                         <ul>
-                            <li><strong>Custom Solutions:</strong> Tailored applications built specifically for your business needs</li>
-                            <li><strong>Modern Technology Stack:</strong> Leveraging the latest .NET, Blazor, and Azure technologies</li>
-                            <li><strong>AI Integration:</strong> Incorporating automation tools like n8n and Auto-GPT for enhanced workflows</li>
-                            <li><strong>Full-Stack Expertise:</strong> From database design to user interface development</li>
-                            <li><strong>Small Business Focus:</strong> Understanding the unique challenges of growing companies</li>
-                            <li><strong>Proven Track Record:</strong> Successfully delivered applications for workflow automation, client portals, and marketplaces</li>
-                            <li><strong>Ongoing Innovation:</strong> Continuously learning and implementing cutting-edge development practices</li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>Custom Solutions:</strong> Tailored applications built specifically for your business needs</span></li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>Modern Technology Stack:</strong> Leveraging the latest .NET, Blazor, and Azure technologies</span></li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>AI Integration:</strong> Incorporating automation tools like n8n and Auto-GPT for enhanced workflows</span></li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>Full-Stack Expertise:</strong> From database design to user interface development</span></li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>Small Business Focus:</strong> Understanding the unique challenges of growing companies</span></li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>Proven Track Record:</strong> Successfully delivered applications for workflow automation, client portals, and marketplaces</span></li>
+                            <li><svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.707-9.293a1 1 0 0 0-1.414-1.414L9 10.586 7.707 9.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4z" clip-rule="evenodd" /></svg><span><strong>Ongoing Innovation:</strong> Continuously learning and implementing cutting-edge development practices</span></li>
                         </ul>
                     </div>
                 </div>
@@ -145,23 +168,23 @@
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z" /></svg>
                         <span>bryank@britesoftware.com</span>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 0 1 1-1h2.153a1 1 0 0 1 .986.836l.74 4.435a1 1 0 0 1-.54 1.06l-1.548.773a11.037 11.037 0 0 0 4.107 4.107l.774-1.548a1 1 0 0 1 1.059-.54l4.435.74a1 1 0 0 1 .836.986V17a1 1 0 0 1-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
                         <span>770-324-1818</span>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 1 1 9.9 9.9L10 18.9l-4.95-4.95a7 7 0 0 1 0-9.9zM10 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" clip-rule="evenodd" /></svg>
                         <span>Adairsville, GA</span>
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="devicon-linkedin-plain"></i>
                         <a href="https://www.linkedin.com/in/bryan-krossley-826a2a1a2/" target="_blank">LinkedIn Profile</a>
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-github"></i>
+                        <i class="devicon-github-original"></i>
                         <a href="https://github.com/krossley" target="_blank">GitHub Profile</a>
                     </div>
                 </div>
@@ -196,53 +219,36 @@
     <section class="tech-stack">
         <div class="container">
             <h2 class="section-title">Technology Stack</h2>
-            <div class="tech-icons">
-                <div class="tech-icon" data-tooltip=".NET Framework">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.868 0 0 1-.869.693.868.868 0 0 1-.868-.693.868.868 0 0 1 .868-.692.868.868 0 0 1 .869.692" />
-                    </svg>
-                </div>
-                <div class="tech-icon" data-tooltip="C#">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M1.194 7.543v8.913c0 1.103.588 2.122 1.544 2.674l7.756 4.456c.956.552 2.133.552 3.088 0l7.757-4.456c.956-.552 1.544-1.571 1.544-2.674V7.543c0-1.103-.588-2.122-1.544-2.674L13.582.414c-.956-.552-2.132-.552-3.088 0L2.738 4.869C1.782 5.421 1.194 6.44 1.194 7.543z" />
-                    </svg>
-                </div>
-                <div class="tech-icon" data-tooltip="SQL Server">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="HTML5">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="CSS3">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="JavaScript">
-                    <i class="fab fa-js-square"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="Azure Cloud">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M5.537 21.5h11.717l-1.923-1.538H7.46zm-.615-3.462h12.155l3.077-2.462H8.845zm3.077-4.923h9.693l2.462-1.846c.308-.308.615-.923.615-1.539s-.307-1.23-.615-1.538L12 .77c-.308-.308-.923-.615-1.538-.615s-1.231.307-1.539.615L.769 8.923c-.308.308-.615.923-.615 1.538s.307 1.231.615 1.539z" />
-                    </svg>
-                </div>
-                <div class="tech-icon" data-tooltip="Git">
-                    <i class="fab fa-git-alt"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="GitHub">
-                    <i class="fab fa-github"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="Blazor">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                </div>
-                <div class="tech-icon" data-tooltip="API">
-                    <i class="fas fa-plug"></i>
-                </div>
-                <div class="tech-icon" data-tooltip="Visual Studio">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.583.063L8.918 8.928 3.833 4.9.208 6.892v10.216l3.625 1.992 5.085-4.028 8.665 8.865L24 21.125V2.875L17.583.063zm4.5 19.375l-6.083-6.458v12.916l6.083-6.458zm-14.167-.667L5.5 20.208V3.792l2.416 1.437 8.667-6.521v20.584l-8.667-6.521z" />
-                    </svg>
-                </div>
+        </div>
+        <div class="ticker-wrap">
+            <div class="ticker-track">
+                <!-- Icon Set 1 -->
+                <div class="ticker-item"><i class="devicon-dotnetcore-plain"></i><span>.NET</span></div>
+                <div class="ticker-item"><i class="devicon-csharp-plain"></i><span>C#</span></div>
+                <div class="ticker-item"><i class="devicon-microsoftsqlserver-plain"></i><span>SQL Server</span></div>
+                <div class="ticker-item"><i class="devicon-html5-plain-wordmark"></i><span>HTML5</span></div>
+                <div class="ticker-item"><i class="devicon-css3-plain-wordmark"></i><span>CSS3</span></div>
+                <div class="ticker-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                <div class="ticker-item"><i class="devicon-azure-plain-wordmark"></i><span>Azure</span></div>
+                <div class="ticker-item"><i class="devicon-git-plain-wordmark"></i><span>Git</span></div>
+                <div class="ticker-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                <div class="ticker-item"><i class="devicon-blazor-original"></i><span>Blazor</span></div>
+                <div class="ticker-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M15 11v-2a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v2H8v2h1v2a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2h1v-2h-1m-3 2h-2v-2h2v2M5 6h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1m0-2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H5Z" /></svg><span>API Integration</span></div>
+                <div class="ticker-item"><i class="devicon-visualstudio-plain-wordmark"></i><span>Visual Studio</span></div>
+
+                <!-- Icon Set 2 (Duplicate for seamless loop) -->
+                <div class="ticker-item"><i class="devicon-dotnetcore-plain"></i><span>.NET</span></div>
+                <div class="ticker-item"><i class="devicon-csharp-plain"></i><span>C#</span></div>
+                <div class="ticker-item"><i class="devicon-microsoftsqlserver-plain"></i><span>SQL Server</span></div>
+                <div class="ticker-item"><i class="devicon-html5-plain-wordmark"></i><span>HTML5</span></div>
+                <div class="ticker-item"><i class="devicon-css3-plain-wordmark"></i><span>CSS3</span></div>
+                <div class="ticker-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+                <div class="ticker-item"><i class="devicon-azure-plain-wordmark"></i><span>Azure</span></div>
+                <div class="ticker-item"><i class="devicon-git-plain-wordmark"></i><span>Git</span></div>
+                <div class="ticker-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+                <div class="ticker-item"><i class="devicon-blazor-original"></i><span>Blazor</span></div>
+                <div class="ticker-item"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M15 11v-2a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v2H8v2h1v2a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2h1v-2h-1m-3 2h-2v-2h2v2M5 6h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1m0-2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H5Z" /></svg><span>API Integration</span></div>
+                <div class="ticker-item"><i class="devicon-visualstudio-plain-wordmark"></i><span>Visual Studio</span></div>
             </div>
         </div>
     </section>
@@ -251,46 +257,34 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Brite Software. All rights reserved. | Developed by <a href="mailto:bryank@britesoftware.com">Bryan Krossley</a></p>
+                <p>© 2024 Brite Software. All rights reserved. | Developed by <a href="mailto:bryank@britesoftware.com">Bryan Krossley</a></p>
             </div>
         </div>
     </footer>
-@*     <script>
-                // Redirect to thanks.html after form submit - MOVED OUTSIDE
-        document.addEventListener('DOMContentLoaded', function () {
-            var form = document.querySelector('.contact-form');
-            if (form) {
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    window.location.href = 'thanks.html';
-                });
-            }
-        });
-        
-    </script> *@
+
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const hamburgerIcon = document.querySelector('.hamburger');
+            const closeIcon = document.querySelector('.close');
+
+            if (navToggle && navLinks) {
+                const toggleNav = () => {
+                    const isActive = navLinks.classList.toggle('nav-active');
+                    hamburgerIcon.style.display = isActive ? 'none' : 'block';
+                    closeIcon.style.display = isActive ? 'block' : 'none';
+                };
+
+                navToggle.addEventListener('click', toggleNav);
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navLinks.classList.contains('nav-active')) {
+                            toggleNav();
+                        }
                     });
-                }
-            });
-        });
-
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
-            } else {
-                header.style.background = 'rgba(0, 0, 0, 0.9)';
+                });
             }
         });
     </script>
