@@ -46,11 +46,14 @@ jobs:
       run: |
         echo "=== Copying CSS folder from wwwroot to root ==="
         
-        # Copy wwwroot/css folder to root folder
+        # Copy contents of wwwroot/css folder to root css folder
         if [ -d "wwwroot/css" ]; then
-          echo "✓ Copying wwwroot/css folder to root folder"
-          cp -r "wwwroot/css" "./css"
-          echo "✓ CSS folder copied successfully"
+          echo "✓ Copying wwwroot/css folder contents to root css folder"
+          # Create css directory if it doesn't exist
+          mkdir -p "./css"
+          # Copy contents of wwwroot/css to ./css (not the directory itself)
+          cp -r "wwwroot/css/"* "./css/"
+          echo "✓ CSS folder contents copied successfully"
           echo "CSS files copied to ./css/:"
           ls -la ./css/
         else
@@ -73,7 +76,7 @@ jobs:
         # Check if there are any changes to commit
         if [ -n "$(git status --porcelain)" ]; then
           echo "✓ Changes detected, committing files"
-          git add thanks.html index.html css/ 2>/dev/null || true
+          git add .
           git commit -m "Auto-copy files from Views and wwwroot/css to root folder [skip ci]"
           git push
           echo "✓ Changes committed and pushed"
