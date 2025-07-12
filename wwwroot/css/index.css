@@ -187,20 +187,21 @@ nav {
     padding: 3px;
     cursor: pointer;
     border-radius: 15px;
+    z-index: 1;
 }
 
     .box::before,
     .box::after {
         content: "";
         position: absolute;
-        inset: -3px;
+        inset: 1px;
         z-index: -1;
         background: conic-gradient(from var(--angle), #ff6600, #1a1a1a, #cc5200, #1a1a1a, #ff6600);
         border-radius: inherit;
     }
 
     .box::after {
-        filter: blur(20px);
+        filter: blur(10px);
         z-index: -2;
     }
 
