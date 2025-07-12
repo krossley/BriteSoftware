@@ -33,7 +33,7 @@ jobs:
           echo "⚠ Views/Home/thanks.html not found"
         fi
         
-        # Copy index.html if it exists in Views (currently only Index.cshtml exists)
+        # Copy index.cshtml if it exists in Views (currently only Index.cshtml exists)
         if [ -f "Views/Home/index.html" ]; then
           echo "✓ Copying Views/Home/index.html to root folder"
           cp "Views/Home/index.html" "./index.html"
