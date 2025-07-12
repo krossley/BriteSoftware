@@ -6,7 +6,7 @@ This GitHub Action automatically copies specified files from the Views folder an
 
 ### HTML Files
 - Copies `Views/Home/thanks.html` to `./thanks.html` in the root folder
-- Looks for `Views/Home/index.html` and copies it to `./index.html` if found
+- Looks for `Views/Home/Index.cshtml` and copies it to `./index.html` if found
 - Preserves existing files in root if source doesn't exist
 
 ### CSS Files  
@@ -39,7 +39,7 @@ The action provides detailed logging showing:
 ## Files affected
 
 - `./thanks.html` (copied from `Views/Home/thanks.html`)
-- `./index.html` (copied from `Views/Home/index.html` if exists)
+- `./index.html` (copied from `Views/Home/Index.cshtml` if exists)
 - `./css/index.css` (copied from `wwwroot/css/index.css`)
 - `./css/site.css` (copied from `wwwroot/css/site.css`)  
 - `./css/style.css` (copied from `wwwroot/css/style.css`)
