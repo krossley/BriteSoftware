@@ -35,8 +35,8 @@ jobs:
         
         # Copy index.cshtml if it exists in Views (currently only Index.cshtml exists)
         if [ -f "Views/Home/index.cshtml" ]; then
-          echo "✓ Copying Views/Home/index.html to root folder"
-          cp "Views/Home/index.html" "./index.html"
+          echo "✓ Copying Views/Home/index.cshtml to root folder"
+          cp "Views/Home/index.cshtml" "./index.html"
           echo "✓ index.html copied successfully"
         else
           echo "⚠ Views/Home/index.html not found, keeping existing index.html in root"
