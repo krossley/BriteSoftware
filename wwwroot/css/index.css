@@ -788,7 +788,7 @@ footer {
     }
 
     .service-cta {
-        visibility: hidden; /* Hide service CTA on mobile */
+        visibility: hidden; /* Hide service CTA Button on mobile */
     }
     /* Logo sizing */
     .logo {
@@ -1137,19 +1137,26 @@ footer {
         opacity: 1;
         visibility: visible;
         transform: none;
-        width: 100%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        width: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 5px;
     }
+
+
+
+  
 
     .box:hover .service-popup {
         transform: none;
+        animation: none;
     }
 
     .cta-button:hover,
     .submit-btn:hover {
         transform: none;
         box-shadow: 0 5px 20px rgba(255, 102, 0, 0.3);
+      
     }
 
     /* Increase touch target sizes */
